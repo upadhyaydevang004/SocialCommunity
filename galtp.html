@@ -1,0 +1,949 @@
+
+<!DOCTYPE html>
+<html class="js browser_ff" dir="ltr" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Solicis Lex-Media & News</title>
+	<meta name="designer" content="solicislex.com">
+	<link rel="shortcut icon" href="http://www.solicislex.com/favicon.ico">
+	
+	    <link rel="pingback" href="http://themedemos.dottoro.com/themes/studio/xmlrpc.php">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="index_files/about_css/style_002.css">
+
+
+	<link rel="stylesheet" type="text/css" media="screen" href="index_files/about_css/style.css">
+
+	<link rel="stylesheet" type="text/css" href="index_files/about_css/css.css">	
+	<link rel="stylesheet" type="text/css" media="screen" id="style_skin_link" href="index_files/about_css/style_skin.css">
+
+	
+				<style type="text/css" id="gen_skins">
+					.list_icon-arrow_right_2-auto .list_item_holder:before {content:'\f008' !important;}
+				</style>	
+	<script type="text/javascript" src="index_files/about_css/dottoro_theme.js"></script>
+			<script type="text/javascript">
+				<!--
+				Dottoro.BlankGifURL = "http://themedemos.dottoro.com/themes/studio/wp-content/themes/dottoro_studio/lib/images/blank.gif";
+				-->
+			</script>
+	<script type="text/javascript" src="index_files/utils.js"></script>
+
+	<script type="text/javascript">
+		Dottoro.SkinMenu = Dottoro.ClassEvents.extend({
+		// private methods:
+			init : function () {
+				this._super ();
+				this.is_open = false;
+				this.timerID = null;
+				this.offset = -5;
+
+				this.skin_menu = document.getElementById ("skin_menu");
+				this.skins_menu_content = document.getElementById ("skins_menu_content");
+				this.skin_menu_tab = document.getElementById ("skin_menu_tab");
+
+				this.sizes = Dottoro.GetSize (this.skins_menu_content);
+				this.left = 0;
+
+				Dottoro.AddAttachEvent ("click", [this, "OnTabClick"], this.skin_menu_tab);
+			},
+
+			OnTabClick : function () {
+				if (this.timerID) {
+					this.offset = -1 * this.offset;
+					return;
+				}
+				var _this = this;
+				this.timerID = setInterval (function () {_this.Anim ()}, 15);
+			},
+
+			Anim :function () {
+				this.left += this.offset;
+				if (this.left < -1 * this.sizes.width) {
+					this.left = -1 * this.sizes.width;
+				}
+				if (this.left >= 0) {
+					this.left = 0;
+				}
+				this.skin_menu.style.left = this.left + 'px';
+				if (this.left == -1 * this.sizes.width || this.left == 0) {
+					clearInterval (this.timerID);
+					this.timerID = null;
+					this.offset = -1 * this.offset;
+				}
+			}
+		});
+
+		function SwitchSkin (skin) {
+			AddQueryToUrl ('skin', skin);
+		}
+
+		function AddQueryToUrl (key, value) {
+			key = escape(key); value = escape(value);
+
+			var kvp = document.location.search.substr(1).split('&');
+			if (kvp == '') {
+				document.location.search = '?' + key + '=' + value;
+			}
+			else {
+
+				var i = kvp.length; var x; while (i--) {
+					x = kvp[i].split('=');
+
+					if (x[0] == key) {
+						x[1] = value;
+						kvp[i] = x.join('=');
+						break;
+					}
+				}
+
+				if (i < 0) { kvp[kvp.length] = [key, value].join('='); }
+
+				//this will reload the page, it's likely better to store this until finished
+				document.location.search = kvp.join('&');
+			}
+		}
+		
+	</script>
+
+<meta name="robots" content="noindex,nofollow">
+<link rel="alternate" type="application/rss+xml" title="Dottoro Studio » Feed" href="http://themedemos.dottoro.com/themes/studio/feed/">
+<link rel="alternate" type="application/rss+xml" title="Dottoro Studio » Comments Feed" href="http://themedemos.dottoro.com/themes/studio/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Dottoro Studio » Home Comments Feed" href="http://themedemos.dottoro.com/themes/studio/home/feed/">
+<script type="text/javascript" src="index_files/comment-reply.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://themedemos.dottoro.com/themes/studio/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://themedemos.dottoro.com/themes/studio/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Video Gallery" href="http://themedemos.dottoro.com/themes/studio/gallery/video-gallery/">
+<link rel="next" title="FAQ" href="http://themedemos.dottoro.com/themes/studio/pages/faq/">
+<meta name="generator" content="WordPress 3.3.2">
+<link rel="canonical" href="http://themedemos.dottoro.com/themes/studio/">
+<style type="text/css">
+<!--
+body {
+	background-color: #fef1d7;
+	background-image: url(index_files/images/);
+}
+.style3 {color: #FFFFFF}
+.style4 {
+	color: #000000;
+	font-weight: bold;
+}
+.style5 {color: #000000}
+.style6 {font-size: 11.5px}
+.style7 {font-size: 140%}
+.style8 {
+	color: #000000;
+	font-family: Calibri;
+	font-size: 15px;
+}
+-->
+</style>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34655406-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<link rel="stylesheet" href="index3_files/vlb_files1/vlightbox1.css" type="text/css" />
+		<link rel="stylesheet" href="index3_files/vlb_files1/visuallightbox.css" type="text/css" media="screen" />
+<script src="index3_files/vlb_engine/jquery.min.js" type="text/javascript"></script>
+		<script src="index3_files/vlb_engine/visuallightbox.js" type="text/javascript"></script>
+</head>
+<body class="home page page-id-956 page-parent page-template-default">
+<div id="wrapper">
+		<a id="top"></a>
+		<header id="headers_margin">
+		  <div id="headers">
+				<div id="header_wrapper_margin">
+					<div id="header_wrapper">
+						<div class="inner">
+							<div id="header_margin">
+								<div id="header">
+									<div id="header_info">
+										<a href="home.html" id="site_logo">
+											<img src="index_files/logo.png" alt="Logo" width="151" height="101" border="0" title="Solicis Lex">										</a>									</div>
+
+					<aside class="primary_header_widget_area widget_area">
+						<div class="primary_header_row">
+						  <div class="clear"></div>
+					  </div>
+					</aside>
+					<nav role="navigation" class="menu-pages-container" id="nav">
+                      <ul class="menu">
+                        <li id="menu-item-956" class=""> <a href="home.html"><span class="label_holder"><span class="label style5">Home</span></span></a>
+                            <ul style="visibility: visible; display: none; left: 0px; top: 30px; opacity: 0; clip: rect(auto, auto, 0px, auto); z-index: 1000;" class="">
+                              <!--
+	<li id="menu-item-12" class="menu-item-12 leaf"><a href="http://themedemos.dottoro.com/themes/studio/home/home-2/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Home 2</span></span><span class="submenu_icon_after"></span></a></li>
+	<li id="menu-item-501" class="menu-item-501 leaf"><a href="http://themedemos.dottoro.com/themes/studio/home/home-3/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Home 3</span></span><span class="submenu_icon_after"></span></a></li>
+	<li id="menu-item-531" class="menu-item-531 leaf"><a href="http://themedemos.dottoro.com/themes/studio/home/home-4/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Home 4</span></span><span class="submenu_icon_after"></span></a></li>
+	<li id="menu-item-1623" class="menu-item-1623 leaf"><a href="http://themedemos.dottoro.com/themes/studio/home/home-blog/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Home Blog</span></span><span class="submenu_icon_after"></span></a></li>
+	<li id="menu-item-1625" class="menu-item-1625 leaf"><a href="http://themedemos.dottoro.com/themes/studio/home/home-portfolio/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Home Portfolio</span></span><span class="submenu_icon_after"></span></a></li>
+	<li id="menu-item-1627" class="menu-item-1627 leaf"><a href="http://themedemos.dottoro.com/themes/studio/home/home-magazine/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Home Magazine</span></span><span class="submenu_icon_after"></span></a></li>-->
+                            </ul>
+                        </li>
+                        <li id="menu-item-208" class="menu-item-208 folder"><a href="about_us.html"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">About Us</span></span><span class="submenu_icon_after"></span></a>
+                            <ul class="">
+                              <!--
+<li id="menu-item-404" class="menu-item-404 folder"><a><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Full width Portfolio</span></span><span class="submenu_icon_after"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-221" class="menu-item-221 leaf"><a href="http://themedemos.dottoro.com/themes/studio/gallery/full-width-portfolio/three-column/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Three Column</span></span><span class="submenu_icon_after"></span></a></li>
+		<li id="menu-item-216" class="menu-item-216 leaf"><a href="http://themedemos.dottoro.com/themes/studio/gallery/full-width-portfolio/two-column/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Two Column</span></span><span class="submenu_icon_after"></span></a></li>
+		<li id="menu-item-214" class="menu-item-214 leaf"><a href="http://themedemos.dottoro.com/themes/studio/gallery/full-width-portfolio/one-column/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">One Column</span></span><span class="submenu_icon_after"></span></a></li>
+		<li id="menu-item-223" class="menu-item-223 leaf"><a href="http://themedemos.dottoro.com/themes/studio/gallery/full-width-portfolio/four-column/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Four Column</span></span><span class="submenu_icon_after"></span></a></li>
+	</ul>
+</li>
+	<li id="menu-item-407" class="menu-item-407 folder"><a><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Portfolio with Sidebar</span></span><span class="submenu_icon_after"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-225" class="menu-item-225 leaf"><a href="http://themedemos.dottoro.com/themes/studio/gallery/portfolio-with-sidebar-2/one-column/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">One Column</span></span><span class="submenu_icon_after"></span></a></li>
+		<li id="menu-item-428" class="menu-item-428 leaf"><a href="http://themedemos.dottoro.com/themes/studio/gallery/portfolio-with-sidebar-2/two-column/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Two Column</span></span><span class="submenu_icon_after"></span></a></li>
+		<li id="menu-item-430" class="menu-item-430 leaf"><a href="http://themedemos.dottoro.com/themes/studio/gallery/portfolio-with-sidebar-2/three-column/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Three Column</span></span><span class="submenu_icon_after"></span></a></li>
+		<li id="menu-item-432" class="menu-item-432 leaf"><a href="http://themedemos.dottoro.com/themes/studio/gallery/portfolio-with-sidebar-2/four-column/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Four Column</span></span><span class="submenu_icon_after"></span></a></li>
+	</ul>
+</li>
+	<li id="menu-item-212" class="menu-item-212 leaf"><a href="http://themedemos.dottoro.com/themes/studio/gallery/imagefolio/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Imagefolio</span></span><span class="submenu_icon_after"></span></a></li>
+	<li id="menu-item-227" class="menu-item-227 leaf"><a href="http://themedemos.dottoro.com/themes/studio/gallery/simple-portfolio/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Simple Portfolio</span></span><span class="submenu_icon_after"></span></a></li>
+	<li id="menu-item-905" class="menu-item-905 leaf"><a href="http://themedemos.dottoro.com/themes/studio/gallery/video-gallery/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Video Gallery</span></span><span class="submenu_icon_after"></span></a></li>
+	<li id="menu-item-210" class="menu-item-210 leaf"><a href="http://themedemos.dottoro.com/themes/studio/gallery/image-gallery/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Image Gallery</span></span><span class="submenu_icon_after"></span></a></li>-->
+                            </ul>
+                 
+
+				 </li>
+                        <li id="menu-item-125" class="menu-item-125 folder" ><a href="team.html"><span class="label">Our Team</span></span><span class="submenu_icon_after"></span></a>
+						 <ul class="">
+						</ul>
+						</li>
+                      <!--  <ul style="visibility: visible; display: none; left: 0px; top: 30px; opacity: 0; clip: rect(auto, auto, 0px, auto); z-index: 1000;" class="sub-menu">
+                          <li id="menu-item-457" class="menu-item-457 folder"><a><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Litigation Matters</span></span><span class="submenu_icon_after"></span></a>
+                              <ul class="sub-menu">
+                                <li id="menu-item-459" class="menu-item-459 leaf"><a href="ameet_mehta.html"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Adv Ameet Mehta</span></span><span class="submenu_icon_after"></span></a></li>
+                                <li id="menu-item-465" class="menu-item-465 leaf"><a href="pramod_tripathy.html"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Adv Pramod Tripathy</span></span><span class="submenu_icon_after"></span></a></li>
+                                <li id="menu-item-130" class="menu-item-130 leaf"><a href="vikhil_dhoka.html"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Adv Vikhil Dhoka</span></span><span class="submenu_icon_after"></span></a></li>
+                                <li id="menu-item-130" class="menu-item-130 leaf"><a href="amit_chougule.html"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Adv Amit Chougule</span></span><span class="submenu_icon_after"></span></a></li>
+                              </ul>
+                          <li id="menu-item-457" class="menu-item-457 folder"><a><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Legal Process Outsourcing</span></span><span class="submenu_icon_after"></span></a>
+                              <ul class="sub-menu">
+                                <li id="menu-item-457" class="menu-item-457 folder"><a><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Ketan Mehta</span></span><span class="submenu_icon_after"></span></a></li>
+                                <li id="menu-item-490" class="menu-item-490 leaf"><a href="vipul_shah.html"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Vipul Shah</span></span><span class="submenu_icon_after"></span></a></li>
+								<li id="menu-item-457" class="menu-item-457 folder"><a href="pathik_shah.html"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Pathik Shah</span></span><span class="submenu_icon_after"></span></a></li>
+                                <li id="menu-item-457" class="menu-item-457 folder"><a><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Bhavini Mehta</span></span><span class="submenu_icon_after"></span></a></li>
+                              </ul>
+                          </li>
+                          </li>
+                        </ul>
+                        </li>-->
+                       <li id="menu-item-434" class="menu-item-434 folder"><a><span class="label_holder"><span class="label style5">Area of Service</span></span></a>
+                            <ul style="visibility: visible; display: none; left: 0px; top: 30px; opacity: 0; clip: rect(auto, auto, 0px, auto); z-index: 1000;" class="sub-menu">
+                              <li id="menu-item-436" class="menu-item-436 folder"><a><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Corporate Commercials</span></span><span class="submenu_icon_after"></span></a>
+										 
+                                  <ul class="sub-menu">
+                                    
+                                    <li id="menu-item-448" class="menu-item-448 leaf"><a href="area_of_services.html#LEGAL DUE DILIGENCE"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Legal Due Diligence</span></span><span class="submenu_icon_after"></span></a></li>
+                                    <li id="menu-item-448" class="menu-item-448 leaf"><a href="area_of_services.html#MERGER AND ACQUISITION, JOINT VENTURES, PRIVATE EQUITY"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Merger And Acquisition, Joint Ventures, Private Equity</span></span><span class="submenu_icon_after"></span></a></li>
+                                    <li id="menu-item-448" class="menu-item-448 leaf"><a href="area_of_services.html#SUPPORT TO INTERNATIONAL FIRMS VENTURING IN INDIA"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Support To  International Firms Venturing In India</span></span><span class="submenu_icon_after"></span></a></li>
+                                    <li id="menu-item-448" class="menu-item-448 leaf"><a href="area_of_services.html#SUPPORT TO INDIAN FIRMS VENTURING ABROAD"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Support To Indian Firms Venturing Abroad</span></span><span class="submenu_icon_after"></span></a></li>
+									 <li id="menu-item-448" class="menu-item-448 leaf"><a href="area_of_services.html#REAL ESTATE PROJECTS"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Real Estate Projects</span></span><span class="submenu_icon_after"></span></a></li>
+                                    <li id="menu-item-448" class="menu-item-448 leaf"><a href="area_of_services.html#BANKING & FINANCE"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Banking & Finance</span></span><span class="submenu_icon_after"></span></a></li>
+                                    <li id="menu-item-448" class="menu-item-448 leaf"><a href="area_of_services.html#INTELLECTUAL PROPERTY RIGHT (IPR) SERVICES"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Intellectual Property Right(IPR) Services</span></span><span class="submenu_icon_after"></span></a></li>
+                                    <li id="menu-item-448" class="menu-item-448 leaf"><a href="area_of_services.html#GENERAL CONTRACT DRAFTING AND REVIEW"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">General Contract Drafting And Review</span></span><span class="submenu_icon_after"></span></a></li>
+                                    <li id="menu-item-448" class="menu-item-448 leaf"><a href="area_of_services.html#WRITTEN OPINIONS"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Written Opinions</span></span><span class="submenu_icon_after"></span></a></li>
+                                    <li id="menu-item-448" class="menu-item-448 leaf"><a href="area_of_services.html#LEGAL CLAIM PROCESSING"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Legal Claim Processing</span></span><span class="submenu_icon_after"></span></a></li>
+									<li id="menu-item-448" class="menu-item-448 leaf"><a href="area_of_services.html#HUMAN RESOURCE COMPLIANCE"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Human Resource Compliance</span></span><span class="submenu_icon_after"></span></a></li>
+									<li id="menu-item-448" class="menu-item-448 leaf"><a href="area_of_services.html#IMPORT EXPORT COMPLIANCE"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Import Export Compliance</span></span><span class="submenu_icon_after"></span></a></li>
+ 
+                                    </ul>
+                              </li>
+								</li>
+                             
+                               <li id="menu-item-436" class="menu-item-436 folder"><a href="litigation-support-and-services.html"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Litigation Support And Services</span></span><span class="submenu_icon_after"></span></a>
+                                  <ul class="">
+                                  </ul>
+                              </li>
+							
+                              
+                              <li id="menu-item-436" class="menu-item-436 folder"><a href="#"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">DRT</span></span><span class="submenu_icon_after"></span></a>
+                                  <ul class="">
+                                  </ul>
+                              </li>
+							   <li id="menu-item-436" class="menu-item-436 folder"><a href="#"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Banking Litigations</span></span><span class="submenu_icon_after"></span></a>
+                                  <ul class="">
+                                  </ul>
+                              </li> <li id="menu-item-436" class="menu-item-436 folder"><a href="#"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">CAT</span></span><span class="submenu_icon_after"></span></a>
+                                  <ul class="">
+                                  </ul>
+                              </li> <li id="menu-item-436" class="menu-item-436 folder"><a href="#"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Consumer Forum</span></span><span class="submenu_icon_after"></span></a>
+                                  <ul class="">
+                                  </ul>
+                              </li> <li id="menu-item-436" class="menu-item-436 folder"><a href="cyber_law.html"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Cyber Law</span></span><span class="submenu_icon_after"></span></a>
+                                  <ul class="">
+                                  </ul>
+                              </li> <li id="menu-item-436" class="menu-item-436 folder"><a href="#"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Taxation</span></span><span class="submenu_icon_after"></span></a>
+                                  <ul class="">
+                                  </ul>
+                              </li>
+							    <li id="menu-item-436" class="menu-item-436 folder"><a href="#"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Child Labour</span></span><span class="submenu_icon_after"></span></a>
+                                  <ul class="">
+                                  </ul>
+                              </li>
+							  <li id="menu-item-436" class="menu-item-436 folder"><a href="#"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Charity Commissioner</span></span><span class="submenu_icon_after"></span></a>
+                                  <ul class="">
+                                  </ul>
+                              </li>
+							  <li id="menu-item-436" class="menu-item-436 folder"><a href="#"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Arbitartion</span></span><span class="submenu_icon_after"></span></a>
+                                  <ul class="">
+                                  </ul>
+                              </li>
+							  <li id="menu-item-436" class="menu-item-436 folder"><a href="#"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Tenancy Matters</span></span><span class="submenu_icon_after"></span></a>
+                                  <ul class="">
+                                  </ul>
+                              </li>
+							  <li id="menu-item-436" class="menu-item-436 folder"><a href="#"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">SEBI Related</span></span><span class="submenu_icon_after"></span></a>
+                                  <ul class="">
+                                  </ul>
+                              </li>
+							
+                            </ul>
+                        </li>
+                       <!--
+                        </li>                              <!--
+<li id="menu-item-404" class="menu-item-404 folder"><a><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Full width Portfolio</span></span><span class="submenu_icon_after"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-221" class="menu-item-221 leaf"><a href="http://themedemos.dottoro.com/themes/studio/gallery/full-width-portfolio/three-column/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Three Column</span></span><span class="submenu_icon_after"></span></a></li>
+		<li id="menu-item-216" class="menu-item-216 leaf"><a href="http://themedemos.dottoro.com/themes/studio/gallery/full-width-portfolio/two-column/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Two Column</span></span><span class="submenu_icon_after"></span></a></li>
+		<li id="menu-item-214" class="menu-item-214 leaf"><a href="http://themedemos.dottoro.com/themes/studio/gallery/full-width-portfolio/one-column/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">One Column</span></span><span class="submenu_icon_after"></span></a></li>
+		<li id="menu-item-223" class="menu-item-223 leaf"><a href="http://themedemos.dottoro.com/themes/studio/gallery/full-width-portfolio/four-column/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Four Column</span></span><span class="submenu_icon_after"></span></a></li>
+	</ul>
+</li>
+	<li id="menu-item-407" class="menu-item-407 folder"><a><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Portfolio with Sidebar</span></span><span class="submenu_icon_after"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-225" class="menu-item-225 leaf"><a href="http://themedemos.dottoro.com/themes/studio/gallery/portfolio-with-sidebar-2/one-column/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">One Column</span></span><span class="submenu_icon_after"></span></a></li>
+		<li id="menu-item-428" class="menu-item-428 leaf"><a href="http://themedemos.dottoro.com/themes/studio/gallery/portfolio-with-sidebar-2/two-column/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Two Column</span></span><span class="submenu_icon_after"></span></a></li>
+		<li id="menu-item-430" class="menu-item-430 leaf"><a href="http://themedemos.dottoro.com/themes/studio/gallery/portfolio-with-sidebar-2/three-column/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Three Column</span></span><span class="submenu_icon_after"></span></a></li>
+		<li id="menu-item-432" class="menu-item-432 leaf"><a href="http://themedemos.dottoro.com/themes/studio/gallery/portfolio-with-sidebar-2/four-column/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Four Column</span></span><span class="submenu_icon_after"></span></a></li>
+	</ul>
+</li>
+	<li id="menu-item-212" class="menu-item-212 leaf"><a href="http://themedemos.dottoro.com/themes/studio/gallery/imagefolio/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Imagefolio</span></span><span class="submenu_icon_after"></span></a></li>
+	<li id="menu-item-227" class="menu-item-227 leaf"><a href="http://themedemos.dottoro.com/themes/studio/gallery/simple-portfolio/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Simple Portfolio</span></span><span class="submenu_icon_after"></span></a></li>
+	<li id="menu-item-905" class="menu-item-905 leaf"><a href="http://themedemos.dottoro.com/themes/studio/gallery/video-gallery/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Video Gallery</span></span><span class="submenu_icon_after"></span></a></li>
+	<li id="menu-item-210" class="menu-item-210 leaf"><a href="http://themedemos.dottoro.com/themes/studio/gallery/image-gallery/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Image Gallery</span></span><span class="submenu_icon_after"></span></a></li>-->
+                            <!-----------------------Media & News----------------------------------------->
+                        <li id="menu-item-208" class="menu-item-208 folder"><a href="#"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Media & News</span></span><span class="submenu_icon_after"></span></a>
+                            <ul style="visibility: visible; display: none; left: 0px; top: 30px; opacity: 0; clip: rect(auto, auto, 0px, auto); z-index: 1000;" class="">
+                              
+                            </ul>
+                        </li>
+						<!-----------------------Media & News----------------------------------------->
+                        <li id="menu-item-208" class="menu-item-208 folder"><a href="career.html"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Careers</span></span><span class="submenu_icon_after"></span></a>
+                            <ul style="visibility: visible; display: none; left: 0px; top: 30px; opacity: 0; clip: rect(auto, auto, 0px, auto); z-index: 1000;" class="">
+                              <!--
+<li id="menu-item-193" class="menu-item-193 leaf"><a href="http://themedemos.dottoro.com/themes/studio/pages/authors/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Authors</span></span><span class="submenu_icon_after"></span></a></li>
+	<li id="menu-item-632" class="menu-item-632 leaf"><a href="http://themedemos.dottoro.com/themes/studio/pages/testimonials/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Testimonials</span></span><span class="submenu_icon_after"></span></a></li>
+	<li id="menu-item-1068" class="menu-item-1068 leaf"><a href="http://themedemos.dottoro.com/themes/studio/pages/faq/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">FAQ</span></span><span class="submenu_icon_after"></span></a></li>
+	<li id="menu-item-197" class="menu-item-197 folder"><a><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Page Layouts</span></span><span class="submenu_icon_after"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-200" class="menu-item-200 leaf"><a href="http://themedemos.dottoro.com/themes/studio/pages/page-layouts/full-width/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Full Width</span></span><span class="submenu_icon_after"></span></a></li>
+		<li id="menu-item-202" class="menu-item-202 leaf"><a href="http://themedemos.dottoro.com/themes/studio/pages/page-layouts/left-sidebar/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Left Sidebar</span></span><span class="submenu_icon_after"></span></a></li>
+		<li id="menu-item-204" class="menu-item-204 leaf"><a href="http://themedemos.dottoro.com/themes/studio/pages/page-layouts/right-sidebar/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Right Sidebar</span></span><span class="submenu_icon_after"></span></a></li>
+	</ul>
+</li>
+	<li id="menu-item-206" class="menu-item-206 leaf"><a href="http://themedemos.dottoro.com/themes/studio/pages/sitemap/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Sitemap</span></span><span class="submenu_icon_after"></span></a></li>
+	<li id="menu-item-189" class="menu-item-189 leaf"><a href="http://themedemos.dottoro.com/themes/studio/pages/archives/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Archives</span></span><span class="submenu_icon_after"></span></a></li>
+	<li id="menu-item-187" class="menu-item-187 leaf"><a href="http://themedemos.dottoro.com/themes/studio/pages/about/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">About</span></span><span class="submenu_icon_after"></span></a></li>-->
+                            </ul>
+                        </li>
+                        <li id="menu-item-185" class="menu-item-185 folder"><a href="contact.html"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Contact Us</span></span><span class="submenu_icon_after"></span></a>
+      <!--<ul style="visibility: visible; display: none; left: 0px; top: 30px; opacity: 0; clip: rect(auto, auto, 0px, auto); z-index: 1000;" class="sub-menu">
+	
+<li id="menu-item-176" class="menu-item-176 leaf"><a href="http://themedemos.dottoro.com/themes/studio/features/typography/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Typography</span></span><span class="submenu_icon_after"></span></a></li>
+	<li id="menu-item-142" class="menu-item-142 leaf"><a href="http://themedemos.dottoro.com/themes/studio/features/custom-gallery/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Custom Gallery</span></span><span class="submenu_icon_after"></span></a></li>
+	<li id="menu-item-229" class="menu-item-229 folder"><a><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">FIND OUR PEOPLE</span></span><span class="submenu_icon_after"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-231" class="menu-item-231 leaf"><a href="http://themedemos.dottoro.com/themes/studio/features/shortcodes/column-layouts/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Local and International contacts</span></span><span class="submenu_icon_after"></span></a></li>
+		<li id="menu-item-241" class="menu-item-241 leaf"><a href="http://themedemos.dottoro.com/themes/studio/features/shortcodes/style-shortcodes/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Style Shortcodes</span></span><span class="submenu_icon_after"></span></a></li>
+		<li id="menu-item-243" class="menu-item-243 leaf"><a href="http://themedemos.dottoro.com/themes/studio/features/shortcodes/styled-boxes/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Styled Boxes</span></span><span class="submenu_icon_after"></span></a></li>
+		<li id="menu-item-245" class="menu-item-245 leaf"><a href="http://themedemos.dottoro.com/themes/studio/features/shortcodes/tab-toggle-tooltip/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Tab Toggle Tooltip</span></span><span class="submenu_icon_after"></span></a></li>
+		<li id="menu-item-247" class="menu-item-247 leaf"><a href="http://themedemos.dottoro.com/themes/studio/features/shortcodes/tables/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Tables</span></span><span class="submenu_icon_after"></span></a></li>
+		<li id="menu-item-249" class="menu-item-249 leaf"><a href="http://themedemos.dottoro.com/themes/studio/features/shortcodes/video/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Video</span></span><span class="submenu_icon_after"></span></a></li>
+		<li id="menu-item-251" class="menu-item-251 leaf"><a href="http://themedemos.dottoro.com/themes/studio/features/shortcodes/widget-shortcodes/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Widget Shortcodes</span></span><span class="submenu_icon_after"></span></a></li>
+		<li id="menu-item-239" class="menu-item-239 leaf"><a href="http://themedemos.dottoro.com/themes/studio/features/shortcodes/slideshow/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Slideshow</span></span><span class="submenu_icon_after"></span></a></li>
+		<li id="menu-item-629" class="menu-item-629 leaf"><a href="http://themedemos.dottoro.com/themes/studio/features/shortcodes/dottoro-gallery/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Dottoro Gallery</span></span><span class="submenu_icon_after"></span></a></li>
+		<li id="menu-item-235" class="menu-item-235 leaf"><a href="http://themedemos.dottoro.com/themes/studio/features/shortcodes/wordpress-gallery/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">WordPress Gallery</span></span><span class="submenu_icon_after"></span></a></li>
+		<li id="menu-item-616" class="menu-item-616 folder"><a><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Posts List Shortcodes</span></span><span class="submenu_icon_after"></span></a>
+		<ul class="sub-menu">
+			<li id="menu-item-619" class="menu-item-619 leaf"><a href="http://themedemos.dottoro.com/themes/studio/features/shortcodes/posts-list-shortcodes/news-list/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">News List</span></span><span class="submenu_icon_after"></span></a></li>
+			<li id="menu-item-237" class="menu-item-237 leaf"><a href="http://themedemos.dottoro.com/themes/studio/features/shortcodes/posts-list-shortcodes/portfolio-list/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Portfolio List</span></span><span class="submenu_icon_after"></span></a></li>
+			<li id="menu-item-626" class="menu-item-626 leaf"><a href="http://themedemos.dottoro.com/themes/studio/features/shortcodes/posts-list-shortcodes/post-list/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Post List</span></span><span class="submenu_icon_after"></span></a></li>
+		</ul>
+</li>
+		<li id="menu-item-233" class="menu-item-233 leaf"><a href="http://themedemos.dottoro.com/themes/studio/features/shortcodes/footer-shortcodes/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Footer Shortcodes</span></span><span class="submenu_icon_after"></span></a></li>
+		<li id="menu-item-1696" class="menu-item-1696 leaf"><a href="http://themedemos.dottoro.com/themes/studio/features/shortcodes/google-maps/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Google Maps</span></span><span class="submenu_icon_after"></span></a></li>
+		<li id="menu-item-253" class="menu-item-253 leaf"><a href="http://themedemos.dottoro.com/themes/studio/features/shortcodes/skins/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Skins</span></span><span class="submenu_icon_after"></span></a></li>-->
+                                          </ul>
+					  </li>
+                      <!--<li id="menu-item-152" class="menu-item-152 leaf"><a href="http://themedemos.dottoro.com/themes/studio/features/custom-widgets/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Custom Widgets</span></span><span class="submenu_icon_after"></span></a></li>
+	<li id="menu-item-154" class="menu-item-154 leaf"><a href="http://themedemos.dottoro.com/themes/studio/features/custom-widget-areas/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Custom Widget Areas</span></span><span class="submenu_icon_after"></span></a></li>
+	<li id="menu-item-164" class="menu-item-164 folder"><a><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Page Specific Subheaders</span></span><span class="submenu_icon_after"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-2050" class="menu-item-2050 leaf"><a href="http://themedemos.dottoro.com/themes/studio/features/page-specific-header/page-without-subheader/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Page Without Subheader</span></span><span class="submenu_icon_after"></span></a></li>
+		<li id="menu-item-174" class="menu-item-174 leaf"><a href="http://themedemos.dottoro.com/themes/studio/features/page-specific-header/simple-subheader-with-custom-title/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Simple Subheader With Custom Title</span></span><span class="submenu_icon_after"></span></a></li>
+		<li id="menu-item-171" class="menu-item-171 leaf"><a href="http://themedemos.dottoro.com/themes/studio/features/page-specific-header/two_column_subheader/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Two-Column Subheader</span></span><span class="submenu_icon_after"></span></a></li>
+		<li id="menu-item-169" class="menu-item-169 leaf"><a href="http://themedemos.dottoro.com/themes/studio/features/page-specific-header/slideshow-in-subheader/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Slideshow in Subheader</span></span><span class="submenu_icon_after"></span></a></li>
+		<li id="menu-item-167" class="menu-item-167 leaf"><a href="http://themedemos.dottoro.com/themes/studio/features/page-specific-header/complex-subheader/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Complex Subheader</span></span><span class="submenu_icon_after"></span></a></li>
+		<li id="menu-item-1741" class="menu-item-1741 leaf"><a href="http://themedemos.dottoro.com/themes/studio/features/page-specific-header/full-width-subheader/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Full width Subheader</span></span><span class="submenu_icon_after"></span></a></li>
+	</ul>
+</li>
+	<li id="menu-item-156" class="menu-item-156 folder"><a><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Slideshows</span></span><span class="submenu_icon_after"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-160" class="menu-item-160 leaf"><a href="http://themedemos.dottoro.com/themes/studio/features/front-page-sliders/flash-slideshow/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Flash Slideshow</span></span><span class="submenu_icon_after"></span></a></li>
+		<li id="menu-item-162" class="menu-item-162 leaf"><a href="http://themedemos.dottoro.com/themes/studio/features/front-page-sliders/javascript-slideshow/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">JavaScript Slideshow</span></span><span class="submenu_icon_after"></span></a></li>
+	</ul>
+</li>
+	<li id="menu-item-178" class="menu-item-178 leaf"><a href="http://themedemos.dottoro.com/themes/studio/features/wordpress-widgets/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">WordPress widgets</span></span><span class="submenu_icon_after"></span></a></li>-->
+                      </ul>
+                      </li>
+                      <!--
+<li id="menu-item-138" class="menu-item-138 leaf"><a href="http://themedemos.dottoro.com/themes/studio/contact/"><span class="submenu_icon_before"></span><span class="label_holder"><span class="label">Contact</span></span><span class="submenu_icon_after"></span></a></li>-->
+                      </ul>
+                    </nav>
+					<script type="text/javascript">
+				var wpThemeMenu = new Dottoro.Menu ();
+				wpThemeMenu.SetSettings ( {"fade":true,"opacFilters":true,"growing":"true","slide":false} );
+				wpThemeMenu.Build ("nav");
+			</script>
+		
+								</div><!-- #header -->
+							</div><!-- #header_margin -->
+						</div><!-- .inner -->
+					</div><!-- #header_wrapper -->
+				</div><!-- #header_wrapper_margin -->
+				<div id="subheader_wrapper_margin">
+					<div id="subheader_wrapper">
+						<div class="inner">
+							<div id="subheader_margin">
+								<div id="subheader">
+								  <!-- .subheader_image -->
+</div>
+								<!-- #subheader -->
+							</div><!-- #subheader_margin -->
+						</div><!-- .inner -->
+					</div><!-- #subheader_wrapper -->
+				</div><!-- #subheader_wrapper_margin -->
+			</div><!-- #headers -->
+		</header><!-- #headers_margin -->
+		<div id="body_wrapper_margin">
+			<div id="body_wrapper">
+				<div class="inner">
+					<div id="body" class="no_sidebar">
+						<div id="content_wrapper">
+						  <div id="content">
+
+							  <article id="page-956" class="post-956 page type-page status-publish hentry entry">
+									<div class="row headings_xsmall" style="margin-top:20px">
+									  <div class="col col23">
+						<div class="inner_margin_medium">
+<a data-dottoro_name="dottoro_tabmenu" data-dottoro_params="&quot;id_prefix&quot;:&quot;tabset4fe00dacdf21a&quot;,&quot;active_tab_class&quot;:&quot;tabset_tab active&quot;,&quot;inactive_tab_class&quot;:&quot;tabset_tab inactive&quot;,&quot;autoplay&quot;:false,&quot;animation_type&quot;:&quot;fadeinout&quot;,&quot;fadeie8&quot;:false"></a>
+<div class="tabset horizontal justify">
+<div class="tabset_tabs justify_childs_3">
+  <div class="clear"></div></div>
+<div class="tabset_tab_contents"><div id="tabset4fe00dacdf21a_box_0" class="tabset_tab_content" style="position: relative; background-color: #bf9a4c;">
+		<div class="clear"></div>
+		<div class="post_list">
+				<div class="grid_list list_3_col">
+						<div class="col col2 col_idx_1 row_idx_1 idx_1mod2 idx_1mod3 idx_1mod4 first_col">
+							<div class="inner_margin_small"><article id="post-61" class="post-61 post type-post status-publish format-standard hentry category-living category-photo entry post_box">
+	<div class="post_content_wrapper ">
+		<header class="post_header">
+			<h2 align="left" class="headings_xsmall post_title"><a class="style7">Media & News</a></h2>					
+		</header>
+
+		<div class="post_body">
+						<div class="post_thumbnail thumb_center">
+						  <div align="justify">
+
+ 
+ <!-- Start VisualLightBox.com BODY section id=1 -->
+	<div id="vlightbox1">
+	
+		
+<a class="vlightbox1" href="index3_files/vlb_images1/DSC_2016.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/DSC_2016.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/DSC_2018.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/DSC_2018.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/DSC_2023.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/DSC_2023.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/DSC_2029.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/DSC_2029.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/DSC_2042.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/DSC_2042.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/DSC_2101.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/DSC_2101.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/DSC_2186.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/DSC_2186.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/IMG_4659.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/IMG_4659.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/IMG_4670.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/IMG_4670.jpg" alt=""/></a>
+	
+	
+<a class="vlightbox1" href="index3_files/vlb_images1/149.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/149.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/279.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/279.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/278.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/278.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/277.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/277.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/276.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/276.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/275.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/275.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/274.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/274.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/273.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/273.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/272.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/272.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/271.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/271.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/270.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/270.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/269.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/269.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/268.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/268.jpg" alt=""/></a>
+
+<a class="vlightbox1" href="index3_files/vlb_images1/267.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/267.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/266.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/266.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/265.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/265.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/264.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/264.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/263.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/263.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/262.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/262.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/261.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/261.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/260.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/260.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/259.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/259.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/258.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/258.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/257.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/257.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/256.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/256.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/255.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/255.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/254.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/254.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/253.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/253.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/252.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/252.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/251.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/251.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/250.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/250.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/249.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/249.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/248.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/248.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/247.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/247.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/246.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/246.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/245.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/245.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/244.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/244.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/243.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/243.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/242.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/242.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/241.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/241.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/240.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/240.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/239.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/239.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/238.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/238.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/237.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/237.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/236.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/236.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/235.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/235.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/234.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/234.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/233.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/233.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/232.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/232.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/231.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/231.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/230.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/230.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/229.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/229.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/228.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/228.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/227.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/227.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/226.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/226.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/225.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/225.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/224.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/224.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/223.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/223.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/222.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/222.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/221.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/221.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/220.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/220.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/219.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/219.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/218.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/218.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/217.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/217.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/216.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/216.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/215.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/215.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/214.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/214.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/213.JPG" target="_blank"><img src="index3_files/vlb_thumbnails1/213.JPG" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/212.JPG" target="_blank"><img src="index3_files/vlb_thumbnails1/212.JPG" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/211.JPG" target="_blank"><img src="index3_files/vlb_thumbnails1/211.JPG" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/210.JPG" target="_blank"><img src="index3_files/vlb_thumbnails1/210.JPG" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/209.JPG" target="_blank"><img src="index3_files/vlb_thumbnails1/209.JPG" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/208.JPG" target="_blank"><img src="index3_files/vlb_thumbnails1/208.JPG" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/207.JPG" target="_blank"><img src="index3_files/vlb_thumbnails1/207.JPG" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/206.JPG" target="_blank"><img src="index3_files/vlb_thumbnails1/206.JPG" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/205.JPG" target="_blank"><img src="index3_files/vlb_thumbnails1/205.JPG" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/204.JPG" target="_blank"><img src="index3_files/vlb_thumbnails1/204.JPG" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/203.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/203.jpg" alt=""/></a>
+
+<a class="vlightbox1" href="index3_files/vlb_images1/202.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/202.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/201.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/201.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/200.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/200.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/199.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/199.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/198.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/198.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/spin.mp4" target="_blank"><img src="index3_files/vlb_thumbnails1/197.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/194.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/194.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/193.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/193.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/192.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/192.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/191.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/191.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/190.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/190.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/189.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/189.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/188.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/188.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/187.pdf" target="_blank"><img src="index3_files/vlb_thumbnails1/187.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/186.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/186.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/185.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/185.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/184.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/184.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/183.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/183.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/182.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/182.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/181.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/181.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/180.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/180.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/179.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/179.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/178.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/178.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/177.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/177.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/176.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/176.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/175b.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/175b.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/175a.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/175a.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/175.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/175.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/174.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/174.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/173.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/173.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/172.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/172.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/171.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/171.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/170.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/170.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/169.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/169.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/168.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/168.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/167.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/167.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/166.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/166.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/165.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/165.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/164.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/164.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/163.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/163.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/162.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/162.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/161.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/161.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/160.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/160.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/159.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/159.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/158.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/158.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/157.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/157.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/156.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/156.jpg" alt=""/></a>
+
+<a class="vlightbox1" href="index3_files/vlb_images1/155.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/155.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/154.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/154.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/153.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/153.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/152.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/152.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/151.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/151.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/150.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/150.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/148.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/148.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/147.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/147.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/146.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/146.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/145.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/145.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/143.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/143.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/144.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/144.jpg" alt=""/></a>
+
+<a class="vlightbox1" href="index3_files/vlb_images1/1.jpg" title="IMC ARTICLE1"><img src="index3_files/vlb_thumbnails1/1.jpg" alt="IMC ARTICLE1" /></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/2.jpg" title="Gujarat Samachar 5th Dec, 2012"><img src="index3_files/vlb_thumbnails1/2.jpg"  alt="Gujarat Samachar 5th Dec, 2012"/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/3.jpg" title="Gujarat Samachar 13 Nov 2013"><img src="index3_files/vlb_thumbnails1/3.jpg" alt="Gujarat Samachar 13 Nov 2013"/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/4.jpg" title="Gujarat Samachar 18 Dec 2013"><img src="index3_files/vlb_thumbnails1/4.jpg" alt="Gujarat Samachar 18 Dec 2013"/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/5.jpg" title="Gujarat Samachar 13072013"><img src="index3_files/vlb_thumbnails1/5.jpg" alt="Gujarat Samachar 13072013"/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/6.jpg" title="IMC ARTICLE1"><img src="index3_files/vlb_thumbnails1/6.jpg" alt="IMC ARTICLE1"/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/7.jpg" title="Gujarat Samachar 5th Dec, 2012"><img src="index3_files/vlb_thumbnails1/7.jpg" alt="Gujarat Samachar 5th Dec, 2012"/></a>
+<!---<a class="vlightbox1" href="index3_files/vlb_images1/8.jpg" title="Gujarat Samachar 13 Nov 2013"><img src="index3_files/vlb_thumbnails1/8.jpg" alt="Gujarat Samachar 13 Nov 2013"/></a>--->
+<a class="vlightbox1" href="index3_files/vlb_images1/9.jpg" title="Gujarat Samachar 18 Dec 2013"><img src="index3_files/vlb_thumbnails1/9.jpg" alt="Gujarat Samachar 18 Dec 2013"/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/10.jpg" title="Gujarat Samachar 13072013"><img src="index3_files/vlb_thumbnails1/10.jpg" alt="Gujarat Samachar 13072013"/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/11.jpg" title="IMC ARTICLE1"><img src="index3_files/vlb_thumbnails1/11.jpg" alt="IMC ARTICLE1"/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/12.jpg" title="Gujarat Samachar 5th Dec, 2012"><img src="index3_files/vlb_thumbnails1/12.jpg" alt="Gujarat Samachar 5th Dec, 2012"/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/13.jpg" title="Gujarat Samachar 13 Nov 2013"><img src="index3_files/vlb_thumbnails1/13.jpg" alt="Gujarat Samachar 13 Nov 2013"/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/14.jpg" title="Gujarat Samachar 18 Dec 2013"><img src="index3_files/vlb_thumbnails1/14.jpg" alt="Gujarat Samachar 18 Dec 2013"/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/15.jpg" title="Gujarat Samachar 13072013"><img src="index3_files/vlb_thumbnails1/15.jpg" alt="Gujarat Samachar 13072013"/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/16.jpg" title="IMC ARTICLE1"><img src="index3_files/vlb_thumbnails1/16.jpg" alt="IMC ARTICLE1"/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/17.jpg" title="Gujarat Samachar 5th Dec, 2012"><img src="index3_files/vlb_thumbnails1/17.jpg" alt="Gujarat Samachar 5th Dec, 2012"/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/18.jpg" title="Gujarat Samachar 13 Nov 2013"><img src="index3_files/vlb_thumbnails1/18.jpg" alt="Gujarat Samachar 13 Nov 2013"/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/19.jpg" title="Gujarat Samachar 18 Dec 2013"><img src="index3_files/vlb_thumbnails1/19.jpg" alt="Gujarat Samachar 18 Dec 2013"/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/20.jpg" title="Gujarat Samachar 13072013"><img src="index3_files/vlb_thumbnails1/20.jpg" alt="Gujarat Samachar 13072013"/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/21.png" title="IMC ARTICLE1"><img src="index3_files/vlb_thumbnails1/21.jpg" alt="IMC ARTICLE1"/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/22.jpg" title="Gujarat Samachar 5th Dec, 2012"><img src="index3_files/vlb_thumbnails1/22.jpg" alt="Gujarat Samachar 5th Dec, 2012"/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/23.jpg" title="Gujarat Samachar 13 Nov 2013"><img src="index3_files/vlb_thumbnails1/23.jpg" alt="Gujarat Samachar 13 Nov 2013"/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/24.jpg" title="Gujarat Samachar 18 Dec 2013"><img src="index3_files/vlb_thumbnails1/24.jpg" alt="Gujarat Samachar 18 Dec 2013"/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/25.jpg" title="Gujarat Samachar 13072013"><img src="index3_files/vlb_thumbnails1/25.jpg" alt="Gujarat Samachar 13072013"/></a>
+<!---<a class="vlightbox1" href="index3_files/vlb_images1/26.jpg" title="IMC ARTICLE1"><img src="index3_files/vlb_thumbnails1/26.jpg" alt="IMC ARTICLE1"/></a>---->
+<a class="vlightbox1" href="index3_files/vlb_images1/27.jpg" title="Gujarat Samachar 5th Dec, 2012"><img src="index3_files/vlb_thumbnails1/27.jpg" alt="Gujarat Samachar 5th Dec, 2012"/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/28.jpg" title="Gujarat Samachar 13 Nov 2013"><img src="index3_files/vlb_thumbnails1/28.jpg" alt="Gujarat Samachar 13 Nov 2013"/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/29.jpg" title="Gujarat Samachar 18 Dec 2013"><img src="index3_files/vlb_thumbnails1/29.jpg" alt="Gujarat Samachar 18 Dec 2013"/></a>
+<!-------16 April 2014-------------------------------->
+<a class="vlightbox1" href="index3_files/vlb_images1/30.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/30.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/31.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/31.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/32.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/32.jpg" alt=""/></a>
+<!---<a class="vlightbox1" href="index3_files/vlb_images1/33.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/33.jpg" alt=""/></a>--->
+<a class="vlightbox1" href="index3_files/vlb_images1/34.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/34.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/35.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/35.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/36.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/36.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/37.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/37.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/38.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/38.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/39.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/39.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/40.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/40.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/41.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/41.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/42.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/42.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/43.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/43.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/44.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/44.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/45.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/45.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/46.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/46.jpg" alt=""/></a>
+<!---<a class="vlightbox1" href="index3_files/vlb_images1/47.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/47.jpg" alt=""/></a>--->
+<a class="vlightbox1" href="index3_files/vlb_images1/48.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/48.jpg" alt=""/></a>
+<!--------20th may 2014------------------------------------------------>
+<a class="vlightbox1" href="index3_files/vlb_images1/49.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/49.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/50.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/50.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/51.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/51.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/52.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/52.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/53.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/53.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/54.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/54.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/55.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/55.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/56.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/56.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/57.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/57.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/58.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/58.jpg" alt=""/></a>
+<!------------------------------02nd June 2014------------------------------------------>
+<a class="vlightbox1" href="index3_files/vlb_images1/59.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/59.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/60.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/60.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/61.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/61.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/62.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/62.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/63.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/63.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/64.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/64.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/65.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/65.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/66.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/66.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/67.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/67.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/68.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/68.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/69.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/69.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/70.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/70.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/71.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/71.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/72.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/72.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/73.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/73.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/74.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/74.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/75.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/75.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/76.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/76.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/77.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/77.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/78.bmp" target="_blank"><img src="index3_files/vlb_thumbnails1/78.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/79.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/79.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/80.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/80.jpg" alt=""/></a>
+<!--------------------13 june 2014------------------------------>
+<a class="vlightbox1" href="index3_files/vlb_images1/81.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/81.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/82.jpeg" target="_blank"><img src="index3_files/vlb_thumbnails1/82.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/83.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/83.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/84.jpeg" target="_blank"><img src="index3_files/vlb_thumbnails1/84.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/85.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/85.jpg" alt=""/></a>
+<!---------------------------25 june 2014----------------------------->
+<a class="vlightbox1" href="index3_files/vlb_images1/86.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/86.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/87.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/87.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/88.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/88.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/89.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/89.jpg" alt=""/></a>
+<!---------------------------29-10-2014---------------------------------->
+<a class="vlightbox1" href="index3_files/vlb_images1/90.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/90.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/91.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/91.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/92.png" target="_blank"><img src="index3_files/vlb_thumbnails1/92.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/93.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/93.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/94.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/94.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/95.png" target="_blank"><img src="index3_files/vlb_thumbnails1/95.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/96.png" target="_blank"><img src="index3_files/vlb_thumbnails1/96.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/97.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/97.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/98.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/98.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/100.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/100.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/101.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/101.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/102.jpeg" target="_blank"><img src="index3_files/vlb_thumbnails1/102.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/103.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/103.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/104.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/104.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/105.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/105.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/106.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/106.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/107.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/107.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/108.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/108.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/109.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/109.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/110.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/110.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/111.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/111.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/112.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/112.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/113.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/113.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/114.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/114.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/115.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/115.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/116.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/116.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/117.bmp" target="_blank"><img src="index3_files/vlb_thumbnails1/117.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/118.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/118.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/119.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/119.jpg" alt=""/></a>
+<!----------------------------------10-11-2014---------------------------------------------------->
+<a class="vlightbox1" href="index3_files/vlb_images1/120.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/120.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/121.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/121.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/122.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/122.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/123.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/123.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/124.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/124.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/125.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/125.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/126.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/126.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/127.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/127.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/128.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/128.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/129.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/129.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/130.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/130.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/131.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/131.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/132.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/132.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/133.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/133.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/134.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/134.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/135.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/135.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/136.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/136.jpg" alt=""/></a>
+<!------------------------------------------22-11-2014----------------------------------------------------->
+<a class="vlightbox1" href="index3_files/vlb_images1/137.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/137.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/138.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/138.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/139.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/139.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/140.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/140.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/141.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/141.jpg" alt=""/></a>
+<a class="vlightbox1" href="index3_files/vlb_images1/142.jpg" target="_blank"><img src="index3_files/vlb_thumbnails1/142.jpg" alt=""/></a>
+
+<!-------------------------------------------16-12-2014--------------------------------------------------------->
+
+
+<span class="vlightbox1" href="#" title=""></span>
+<span class="vlightbox1" href="#" title=""></span>
+<!----------------------------------------------
+<span class="vlightbox1" href="#" target="_blank"></span>--------------->
+
+<!---------------------------------------------------------------------------------------------------------------------------->
+
+
+<!--<span class="vlb"><a href="http://visuallightbox.com">video jquery lightbox</a>by VisualLightBox.com v5.9</span>--->
+	</div>
+	<script src="index3_files/vlb_engine/thumbscript1.js" type="text/javascript"></script>
+	<script src="index3_files/vlb_engine/vlbdata1.js" type="text/javascript"></script>
+	<!-- End VisualLightBox.com BODY section -->
+
+						     </div>
+						</div>
+			
+						<div class="post_content">
+						  <div align="justify">
+						    <p>&nbsp;</p>
+						    <p align="right" class="style4"><a href="#"></a> </p>
+						  </div>
+						</div>
+					</div>
+		<div class="clear"></div>
+			</div>
+
+	<!-- POST COMMENTS NUM AND CATEGORY -->
+</article>
+							</div>
+						</div>
+						<div class="clear"></div>
+				</div>
+		</div>
+		<div class="clear"></div></div>
+<div id="tabset4fe00dacdf21a_box_1" class="tabset_tab_content" style="display:none;">
+				<div class="portfolio_list" id="portfolio4fe00dace8d61"><div>
+				<div class="grid_list list_3_col">
+						<div class="col col2 col_idx_1 row_idx_1 idx_1mod2 idx_1mod3 idx_1mod4 first_col">
+							<div class="inner_margin_small">					<article id="post-289" class="post-289 portfolio type-portfolio status-publish hentry entry post_box">
+											<div class="post_thumbnail thumb_center">
+							<a style="cursor: default;" class="image_anchor dottoro_gallery_image_thumb" data-dottoro_name="gallery" data-dottoro_params="group:'portfolio', image_id:'2023', add_to_gallery:false, gallery_url:'http://themedemos.dottoro.com/themes/studio/wp-content/uploads/2012/03/petrol.jpg'"><img title="Maecenas tellus libero" alt="thumbnail" src="index_files/petrol-240x150.jpg" height="150" width="240"></a>
+<div style="display:none"><a rel="nofollow" data-dottoro_name="gallery" data-dottoro_params="group:'portfolio', image_id:'2023', add_to_gallery:true, show_hoverelem:false, permalink:'http://themedemos.dottoro.com/themes/studio/wp-content/uploads/2012/03/petrol.jpg', title:'petrol', title_as_link:true" style="display: none; cursor: default;"></a></div>						</div>
+											<div class="no_float">
+
+							<h2 class="headings_xsmall post_title"><a href="http://themedemos.dottoro.com/themes/studio/portfolio/2012/03/maecenas-tellus-libero/" rel="bookmark" title="Maecenas tellus libero">Maecenas tellus libero</a></h2>
+															<div class="post_content">Sed tempor condimentum sem, et 
+laoreet libero ultricies quis. Nam massa dui, imperdiet et aliquam at, 
+ullamcorper eu mauris. Integer tristique tempor dolor eget vulputate. 
+Nullam vel auctor diam. Sed  ...</div>
+							
+							
+						</div>
+						<div class="clear"></div>
+					</article>
+
+							</div>
+						</div>
+						<div class="col col2 col_idx_2 row_idx_1 idx_0mod2 idx_2mod3 idx_2mod4 last_col">
+							<div class="inner_margin_small">					<article id="post-287" class="post-287 portfolio type-portfolio status-publish hentry entry post_box">
+											<div class="post_thumbnail thumb_center">
+							<a style="cursor: default;" class="image_anchor dottoro_gallery_image_thumb" data-dottoro_name="gallery" data-dottoro_params="group:'portfolio', image_id:'2028', add_to_gallery:false, gallery_url:'http://themedemos.dottoro.com/themes/studio/wp-content/uploads/2012/03/shed.jpg'"><img title="Aliquam erat volutpat" alt="thumbnail" src="index_files/shed-240x150.jpg" height="150" width="240"></a>
+<div style="display:none"><a rel="nofollow" data-dottoro_name="gallery" data-dottoro_params="group:'portfolio', image_id:'2028', add_to_gallery:true, show_hoverelem:false, permalink:'http://themedemos.dottoro.com/themes/studio/wp-content/uploads/2012/03/shed.jpg', title:'shed', title_as_link:true" style="display: none; cursor: default;"></a></div>						</div>
+											<div class="no_float">
+
+							<h2 class="headings_xsmall post_title"><a href="http://themedemos.dottoro.com/themes/studio/portfolio/2012/03/aliquam-erat-volutpat/" rel="bookmark" title="Aliquam erat volutpat">Aliquam erat volutpat</a></h2>
+															<div class="post_content">Phasellus eu sapien eu sapien 
+porta consectetur id malesuada felis. Nullam vel faucibus odio. Sed 
+justo quam, euismod eget ultrices ac, iaculis sed nulla. Curabitur 
+tempus mollis consectetur. Aliquam tortor ...</div>
+							
+							
+						</div>
+						<div class="clear"></div>
+					</article>
+
+							</div>
+						</div>
+					<div class="clear"></div>
+				</div>
+					</div></div><a data-dottoro_name="gallery_settings" data-dottoro_params="&quot;autoplay&quot;:true,&quot;playinterval&quot;:6,&quot;group&quot;:&quot;portfolio&quot;" style="display: none;"></a>
+</div></div>
+<div class="clear"></div></div>
+</div>
+					</div>
+<div class="clear"></div>
+					</div>
+<br>
+
+
+											
+					
+							  <!--<div id="hoverelem4fe00dacf2fd0_content" style="display:none;">
+																								<h6 class="hover_title"><a href="http://themedemos.dottoro.com/themes/studio/portfolio/2012/03/aliquam-erat-volutpat/" rel="bookmark" title="Aliquam erat volutpat">Aliquam erat volutpat</a></h6>
+															
+															<div class="hover_excerpt">Phasellus eu sapien eu sapien porta consectetur id malesuada felis. Nullam  ...</div>
+							  </div>-->
+					
+					
+
+<br>
+<div class="row">
+  <div class="clear"></div>
+					</div>
+
+<div class="row headings_small"></div>																		
+							  </article>
+							</div>
+						</div>
+					</div>
+					<!-- #body -->
+				</div><!-- .inner -->
+			</div><!-- #body_wrapper -->
+		</div><!-- #body_wrapper_margin -->
+		<footer id="footer_wrapper_margin">
+          <div id="footer_wrapper">
+            <div id="footer_widget_wrapper_margin">
+              <div id="footer_widget_wrapper">
+                <div class="inner">
+                  <div id="footer">
+                    <aside class="primary_footer_widget_area widget_area">
+                      <div class="primary_footer_row">
+                        <div class="col col4">
+                          <div class="inner_margin_small">
+                            <section id="text-5" class="widget widget_distinct widget_text">
+                              <header class="widget_title_wrapper">
+                                <div class="widget_title">
+                                  <div class="widget_title_icon"></div>
+                                  <h2 class="widget_title_text style3">Disclaimar								  </h2>
+                                  <p class="widget_title_text style3 style6">Rules of Bar Council of India does not permit law firms to develop a regular website. This is only a resource center aimed at providing information regarding corporate and legal matters.</p>
+                                </div>
+                                <!--widget_title_wrapper-->
+                              </header>
+                              <article class="widget_body"></article>
+                            </section>
+                            <!--widget-->
+                          </div>
+                        </div>
+                        <div class="clear"></div>
+                      </div>
+                    </aside>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="footer_content_wrapper_margin">
+              <div id="footer_content_wrapper">
+                <div class="inner">
+                  <div class="style3" id="footer_content"> Copyright © 2012 Solicislex&#0153;.com. All Rights Reserved.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+		  <!-- #footer_wrapper -->
+        </footer>
+		<!-- #footer_wrapper_margin -->
+</div>
+<!-- #wrapper -->
+
+<a id="to_top" href="#"><div class="arrow"></div><div class="arrow_inner"></div></a>
+			<script type="text/javascript">
+		new Dottoro.SkinMenu ();
+	</script>
+
+
+</body></html>
